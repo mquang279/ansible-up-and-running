@@ -11,12 +11,15 @@ ansible <group> -i <inventory> -m <module> -a "<arguments>"
 - Để sử dụng quyền `sudo` thêm `--become` hoặc `-b`
 # 2. Một số Module
 - `ping`: test
+
 ![alt text](image-1.png)
 - `command`: Chạy lệnh
+
 ![alt text](image.png)
 - `copy`: Copy file
 ```bash
 ansible webservers -m copy -a "src=a.txt dest=/tmp/a.txt"
 ```
 - `apt`: Cài package
+
 ![alt text](image-2.png)
