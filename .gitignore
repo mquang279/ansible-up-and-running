@@ -1,1 +1,10 @@
-.vagrant
+.vagrant/
+**/.vagrant/
+*.pem
+*.key
+private_key
+*.retry
+.DS_Store
+*.swp
+.vscode/
+*.log
