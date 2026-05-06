@@ -27,6 +27,11 @@ Playbook (list)
 - `hosts`: Group server từ inventory
 - `tasks`: Danh sách task, mỗi task dùng 1 module (`package`, `copy`, `file`, `service`, `template`,...)
 
+Để chạy Playbook, sử dụng lệnh:
+```bash
+ansible-playbook -i <inventory_path> playbook.yaml
+```
+
 ## 2. Plays
 **Plays** được định nghĩa bằng dictionary trong `YAML`. **Plays** sẽ chứa những variables sau:
 - `name`: Tên của play
