@@ -33,7 +33,7 @@ Playbook (list)
 - `become`: Biến boolean, chỉ định có dùng `sudo` hay không.
 - `vars`: Danh sách các biến và giá trị.
 - `tasks`: Danh sách các task mà play sẽ thực thi.
-# 3. Tasks
+## 3. Tasks
 ```yaml
 - name: Ensure nginx is installed
   package:
