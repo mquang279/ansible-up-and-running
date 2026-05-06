@@ -8,7 +8,3 @@ all:
           ansible_port: 2200
         vagrant3:
           ansible_port: 2201
-      vars:
-        ansible_host: 127.0.0.1
-        ansible_user: vagrant
-        ansible_private_key_file: /home/minhquang/.vagrant.d/insecure_private_key
