@@ -52,3 +52,18 @@ Một số module thường được sử dụng là:
 - `file`: Set thuộc tính của file.
 - `service`: Start, stop hoặc restart một service.
 - `template`: Sinh file từ template và copy vào server.
+- `user`: Tạo user trên server, thêm SSH key cho user hoặc xoá user khi cần.
+```yaml
+- name: Create deploy user on webservers
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Create user deploy
+      user:
+        name: ubuntu
+        state: present
+        shell: /bin/bash
+        create_home: yes
+        groups: sudo
+        append: yes
+```

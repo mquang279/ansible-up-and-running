@@ -1,5 +1,6 @@
 # Ansible Variables
-> **Ansible Variables** là những giá trị định nghĩa để dùng lại trong playbook, thay vì hardcode. Variables có thể được định nghĩa ở nhiều nơi: inventory, playbook hoặc file riêng.
+> **Ansible Variables** là những giá trị định nghĩa để dùng lại trong playbook, thay vì hardcode. Variables có thể được định nghĩa ở nhiều nơi: inventory, playbook hoặc file riêng. 
+> Nên tách ra thành file riêng thay vì định nghĩa trong inventory.
 
 ## 1. Định nghĩa trong Inventory
 ```yaml
