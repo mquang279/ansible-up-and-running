@@ -1,0 +1,26 @@
+- name: Create EC2 instance on AWS
+  hosts: localhost
+  connection: local
+  vars:
+    instance_type: t2.micro
+    region: us-east-2
+    ami_id: ami-0c55b159cbfafe1f0
+    key_name: key-pair
+  tasks:
+    - name: Create EC2 instance
+      amazon.aws.ec2_instance:
+        name: "ansible-test-instance"
+        key_name: "{{ key_name }}"
+        instance_type: "{{ instance_type }}"
+        image_id: "{{ ami_id }}"
+        wait: yes
+        region: "{{ region }}"
+        security_group: default
+        network:
+          assign_public_ip: yes
+        tags:
+          Environment: Testing
+      register: ec2
+    - name: Debug instance info
+      debug:
+        msg: "Instance created with ID {{ ec2.instances[0].instance_id }} and IP {{ ec2.instances[0].public_ip_address }}"
